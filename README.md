@@ -1,45 +1,25 @@
-# ProjecteData
-## Simulador Empresarial
+# 🏨 Análisis de Alojamientos Turísticos — Gaia Travels
 
-El simulador empresarial és un projecte que recrea un entorn professional per a posar en pràctica les habilitats tècniques i col·laboratives dels estudiants de IT Academy de Barcelona Activa.
+> Proyecto final del Simulador Empresarial · IT Academy Barcelona Activa · Equip 10
 
-Si recentment ingresses al projecte, llegeix tot abans de començar.
+---
 
-## Estudiants nous
+## 📋 Descripción del proyecto
 
-¡Benvingut al repositori de Projecte Data GitHub de IT Academy de Barcelona Activa! En aquesta secció et guiarem sobre els elements claus del projecte perquè puguis aprofitar al màxim aquesta experiència d'aprenentatge.
+Este proyecto simula el trabajo real de un **Departamento de Análisis de Datos** dentro de una empresa del sector turístico llamada **Gaia Travels**. A lo largo de cuatro sprints, el equipo realizó un análisis completo del mercado de alojamientos turísticos en España: desde la extracción y limpieza de datos hasta la generación de KPIs, visualizaciones interactivas y un dashboard en Power BI con propuestas de negocio accionables.
 
-### Escenar
-Integraràs el Departament d'Analistes de Dades d'una empresa.
+El proyecto nació en el marco del **Simulador Empresarial de IT Academy (Barcelona Activa)**, un entorno de aprendizaje que replica las dinámicas de trabajo profesional — reuniones de equipo, gestión ágil con tablero Kanban, roles especializados y presentaciones semanales de resultados.
 
-### Equip
-En el teu equip haurà de 3 a 5 estudiants que integraran un Departament d'Analista de Dades.
-Rols possibles:
-- Analistes de Màrqueting i Comunicació
-- Analistes de Finances i Risc Creditici
-- Analistes del Perfil del Client
-- Analista d'operacions i gestió d'inventari
-- Analista d'experiència del client
-- Responsable de Qualitat del Repositori (rol rotatiu)
-- Facilitadora/ Directora del departament: Mentora
+---
 
-### Reunions importants
+## 🎯 Objetivos
 
-- Cada **dilluns** s'alliberarà el desafiament setmanal i es presentaran els resultats del desafiament anterior.
-- De **dimarts a dijous** es revisarà la planificació del treball de la setmana i es coordinarà les tasques entre membres de 
-  l'equip.
-- Cada dues setmanes, **els dijous**, es realitza una retrospectiva dels sprints realitzades.
-- El projecte requereix una dedicació setmanal, per estudiant, de 20 hores aproximadament.
+- Aplicar un flujo completo de análisis de datos (ETL → EDA → KPIs → Visualización → Propuestas)
+- Analizar el comportamiento de los alojamientos turísticos en España: ocupación, pernoctaciones, perfil del viajero y satisfacción del cliente
+- Identificar patrones de estacionalidad, variaciones anuales y procedencia de viajeros
+- Construir un dashboard interactivo en Power BI para la toma de decisiones empresariales
+- Elaborar propuestas de negocio concretas alineadas con la **Estrategia de Turismo España 2030**
 
-### Estructura del repositori
+---
 
-- Equip: Hauràs de seleccionar la carpeta del teu equip per a treballar.
-- Data: Conté tots els fitxers essencials per treballar amb la base de dades, incloent els scripts SQL i els datasets originals en csv.
-- Scripts: Emmagatzemar tots els scripts de codi que s'utilitzen per a processar dades, realitzar anàlisis i generar resultats.
-- Results: Almacenar los resultados finales del análisis, tales como gráficos e informes.
-
-
-### ¡TREBALLA EN EQUIP!
--  Tota la planificació del treball la trobaràs en el tauler Kanban corresponent al projecte del **teu equip**. Per exemple: @ITACADEMYprojectes's Equip B
-
-  
+## 🗂️ Estructura del repositorio

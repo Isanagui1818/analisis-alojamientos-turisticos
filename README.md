@@ -40,17 +40,27 @@ Una de las características más diferenciales del simulador fue la introducció
 
 ## 🔄 Metodología: 4 Sprints
 
-### Sprint 1 — ETL + EDA General
-Conexión a la base de datos MySQL (`Tourist_Accommodation`), carga de datos con SQLAlchemy y pandas, limpieza y transformación de variables (`bathrooms`, `bedrooms`, `beds`), imputación de nulos por medianas agrupadas y primeras exploraciones estadísticas y visuales con matplotlib y seaborn.
+Cada sprint giraba en torno a una **pregunta de negocio** planteada por Gaia Travels. El equipo debía responderla con los datos disponibles, respetando el handicap tecnológico de la semana y entregando resultados accionables. El Sprint 1 fue el más exigente al combinar la construcción completa del pipeline ETL con el primer análisis exploratorio. A partir del Sprint 2, la ETL se mantenía o actualizaba únicamente si los datos del nuevo sprint introducían cambios estructurales, lo que permitió al equipo centrarse progresivamente en el análisis y las conclusiones de negocio.
+
+### Sprint 1 — ETL + EDA General *(el más exigente)*
+**Pregunta de negocio:** ¿Cuál es el estado actual del mercado de alojamientos turísticos en España y qué variables explican mejor el comportamiento de la oferta?
+
+Construcción del pipeline ETL completo: conexión a la base de datos MySQL (`Tourist_Accommodation`) con SQLAlchemy y pandas, limpieza y transformación de variables (`bathrooms`, `bedrooms`, `beds`), imputación de nulos por medianas agrupadas. Sobre el dataset resultante se realizó el EDA general con primeras exploraciones estadísticas y visuales con matplotlib y seaborn. Este sprint estableció la base de datos limpia de la que partirían todos los sprints siguientes.
 
 ### Sprint 2 — Análisis por Departamentos
-Análisis especializados según los roles del equipo: marketing y comunicación, experiencia del cliente y operaciones. Cada área profundizó en las variables relevantes para su dominio, generando visualizaciones propias y conclusiones parciales.
+**Pregunta de negocio:** ¿Qué insights específicos puede extraer cada área de negocio (marketing, operaciones, experiencia del cliente) para mejorar su toma de decisiones?
+
+Cada analista respondió la pregunta desde su área de especialización, profundizando en las variables relevantes para su dominio. La ETL se actualizó puntualmente para incorporar los nuevos datos entregados en CSV tras la caída del servidor SQL (handicap de la semana).
 
 ### Sprint 3 — KPIs e Indicadores de Negocio
-Definición y cálculo de los KPIs principales del proyecto: tasa de ocupación mensual, índice de satisfacción general, ciudad con mayor ocupación e ítem con mayor valoración. Generación de dashboards interactivos en HTML con Plotly (`fig1_ocupacion`, `fig2_satisfaccion`, `fig3_ciudad`, `fig4_item`).
+**Pregunta de negocio:** ¿Cuáles son los indicadores clave de rendimiento de Gaia Travels y cómo evolucionan?
 
-### Sprint 4 — Benchmarking Externo y Entregables Finales
-Integración de datasets reales del **INE** para contrastar los datos internos de Gaia Travels con el comportamiento del mercado turístico español. Análisis de variaciones anuales de viajeros, pernoctaciones y estancia media. Segmentación por comunidades autónomas, provincias y país de residencia. Limpieza y exportación de datasets optimizados para Power BI. Entrega del dashboard final y documentos de propuestas estratégicas de negocio.
+Definición y cálculo de los KPIs principales: tasa de ocupación mensual, índice de satisfacción general, ciudad con mayor ocupación e ítem con mayor valoración. Ante la caducidad de las licencias de Power BI (handicap), se generaron dashboards interactivos alternativos en HTML con Plotly (`fig1_ocupacion`, `fig2_satisfaccion`, `fig3_ciudad`, `fig4_item`).
+
+### Sprint 4 — Benchmarking Externo y Propuestas Estratégicas
+**Pregunta de negocio:** ¿Cómo se posiciona Gaia Travels frente al mercado turístico real español y hacia dónde debería dirigir su estrategia?
+
+La empresa solicitó contrastar los datos internos con el comportamiento real del sector. Se integraron datasets del **INE** (viajeros, pernoctaciones, estancia media, variaciones anuales por comunidades autónomas y país de residencia) para contextualizar los KPIs propios dentro del mercado real. Las conclusiones fundamentaron las propuestas estratégicas de negocio alineadas con la **Estrategia de Turismo España 2030**. Todo ello entregado bajo plazo reducido (handicap de la semana).
 
 ---
 
@@ -140,9 +150,9 @@ Además de las responsabilidades de análisis de experiencia del cliente, asumí
 **Tourism Accommodation Analysis — Gaia Travels**
 Final project of the IT Academy Business Simulator (Barcelona Activa). A four-sprint data analysis project simulating a real Data Analytics Department within a fictional tourism company.
 
-**What we built:** Full ETL pipeline from MySQL + CSV sources → EDA → KPI calculation → interactive Plotly dashboards → Power BI final dashboard with business proposals aligned with Spain's Tourism Strategy 2030.
+**What we built:** Each sprint was structured around a business question posed by Gaia Travels. Sprint 1 was the most demanding — it combined building the full ETL pipeline from scratch (MySQL + CSV) with the initial exploratory analysis. From Sprint 2 onwards, the ETL was only updated when incoming data required it, allowing the team to focus increasingly on analysis and business conclusions: department-level insights → KPI tracking → external benchmarking against real market data → Power BI dashboard and strategic proposals aligned with Spain's Tourism Strategy 2030.
 
-**What made it challenging:** Each sprint introduced a simulated real-world constraint (SQL server down, expired BI licences, shortened deadline + external benchmarking requirement). Sprint 4 required integrating INE (Spanish National Statistics Institute) datasets to benchmark internal KPIs against real market data under time pressure.
+**What made it challenging:** Each sprint introduced a simulated real-world constraint (SQL server down, expired BI licences, shortened deadline + external benchmarking requirement). Sprint 4 required integrating INE (Spanish National Statistics Institute) datasets to benchmark internal KPIs against real market data, all under a reduced deadline.
 
 **My role:** Customer Experience Analyst + team Data Steward — responsible for centralised ETL and weekly dataset preparation for all departments, ensuring each team received clean, scoped data ready for their specific analysis.
 

@@ -124,28 +124,7 @@ Los datos son **ficticios**, generados para el simulador con estructura realista
 Además de las responsabilidades de análisis de experiencia del cliente, asumí el rol transversal de **Data Steward** del equipo. El dataset original contenía un volumen elevado de columnas y variables, y cada sprint los distintos departamentos requerían subconjuntos distintos. Me encargué de coordinarlo al inicio de cada sprint: identificando qué variables necesitaba cada área, ejecutando la limpieza y selección, y entregando datasets optimizados listos para el análisis. Esto evitó que cada analista cargara y procesara el dataset completo de forma redundante, reduciendo tiempos y garantizando coherencia en los datos de partida para todo el equipo.
 
 ---
-
-## ⚙️ Cómo reproducir el análisis
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/Isanagui1818/analisis-alojamientos-turisticos.git
-   ```
-2. Instala las dependencias principales:
-   ```bash
-   pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
-   ```
-3. Navega a la carpeta del equipo:
-   ```bash
-   cd Equip_10/Scripts/
-   ```
-4. Ejecuta los notebooks en orden de sprint (Sprint_1 → Sprint_4).
-
-> **Nota:** Los notebooks que se conectan a MySQL requieren acceso a la base de datos del proyecto. Para el análisis con CSVs locales, los archivos necesarios están incluidos en cada carpeta de sprint.
-
----
-
-## 🇬🇧 English summary
+<sub><img src="https://flagcdn.com/16x12/us.png" alt="US"> English summary</sub>
 
 **Tourism Accommodation Analysis — Gaia Travels**
 Final project of the IT Academy Business Simulator (Barcelona Activa). A four-sprint data analysis project simulating a real Data Analytics Department within a fictional tourism company.

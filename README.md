@@ -125,24 +125,4 @@ In addition to my customer experience analysis responsibilities, I took on the t
 
 ---
 
-## ⚙️ How to reproduce the analysis
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Isanagui1818/analisis-alojamientos-turisticos.git
-   ```
-2. Install the main dependencies:
-   ```bash
-   pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
-   ```
-3. Navigate to the team folder:
-   ```bash
-   cd Equip_10/Scripts/
-   ```
-4. Run the notebooks in sprint order (Sprint_1 → Sprint_4).
-
-> **Note:** Notebooks that connect to MySQL require access to the project database. For analysis using local CSVs, the necessary files are included in each sprint folder.
-
----
-
 *Project developed at IT Academy · Barcelona Activa · Business Simulator · 2025*

@@ -30,10 +30,10 @@ Algunos ejemplos de restricciones aplicadas:
 
 | Semana | Restricción simulada | Solución adoptada |
 |---|---|---|
-| Sprint 1 | El servidor MySQL está caído — sin acceso a base de datos | Carga directa desde CSVs con pandas |
-| Sprint 2 | Las licencias de Power BI han caducado | Visualizaciones alternativas con Plotly y matplotlib |
-| Sprint 3 | No se puede usar Jupyter Notebook | Scripts `.py` ejecutados desde terminal |
-| Sprint 4 | Restricción de librerías externas | Análisis con funciones nativas de Python y pandas |
+| Sprint 1 | Sin restricción — sprint de arranque | — |
+| Sprint 2 | Servidor SQL caído — datos inaccesibles por base de datos | Entrega de datos en CSV · carga directa con pandas |
+| Sprint 3 | Licencias de Power BI caducadas | Visualizaciones alternativas con Plotly y matplotlib |
+| Sprint 4 | Plazo reducido — entrega el jueves en lugar del lunes siguiente | Priorización de tareas y coordinación intensiva del equipo |
 
 > Este mecanismo entrenó la capacidad del equipo para **adaptarse a entornos con recursos limitados**, tomar decisiones técnicas bajo presión y encontrar soluciones alternativas manteniendo la calidad del análisis — una competencia directamente transferible al entorno profesional real.
 

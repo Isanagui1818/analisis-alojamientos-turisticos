@@ -76,7 +76,7 @@ The company requested benchmarking internal data against real sector behaviour. 
 | **MySQL** | Main database (`Tourist_Accommodation`) |
 | **Power BI** | Final interactive dashboard |
 | **Jupyter Notebook** | Development and documentation environment |
-| **Git / GitLab** | Version control and team collaboration |
+| **Git / GitHub** | Version control and team collaboration |
 
 ---
 

@@ -22,6 +22,23 @@ El proyecto nació en el marco del **Simulador Empresarial de IT Academy (Barcel
 
 ---
 
+## ⚡ Handicaps tecnológicos semanales
+
+Una de las características más diferenciales del simulador fue la introducción de un **handicap tecnológico cada semana**, simulando imprevistos reales del entorno profesional. Al liberar los datos del nuevo sprint, el equipo recibía una restricción técnica adicional que obligaba a replantear el enfoque y buscar soluciones alternativas.
+
+Algunos ejemplos de restricciones aplicadas:
+
+| Semana | Restricción simulada | Solución adoptada |
+|---|---|---|
+| Sprint 1 | El servidor MySQL está caído — sin acceso a base de datos | Carga directa desde CSVs con pandas |
+| Sprint 2 | Las licencias de Power BI han caducado | Visualizaciones alternativas con Plotly y matplotlib |
+| Sprint 3 | No se puede usar Jupyter Notebook | Scripts `.py` ejecutados desde terminal |
+| Sprint 4 | Restricción de librerías externas | Análisis con funciones nativas de Python y pandas |
+
+> Este mecanismo entrenó la capacidad del equipo para **adaptarse a entornos con recursos limitados**, tomar decisiones técnicas bajo presión y encontrar soluciones alternativas manteniendo la calidad del análisis — una competencia directamente transferible al entorno profesional real.
+
+---
+
 ## 🗂️ Estructura del repositorio
 
 El trabajo está organizado dentro de la carpeta `Equip_10`, dividida en tres áreas principales que reflejan las fases del análisis: los datos de origen, los scripts de procesamiento agrupados por sprint y los resultados finales entregables.
@@ -82,67 +99,68 @@ Análisis de variaciones anuales de viajeros, pernoctaciones y estancia media. S
 
 ## 📁 Datos utilizados
 
+Los datos son **ficticios**, generados para el simulador con estructura realista basada en el mercado de alojamientos turísticos español.
+
+**Cobertura geográfica:** Barcelona · Girona · Madrid · Mallorca · Menorca · Sevilla · Valencia
+
 - **Base de datos MySQL**: tabla `Tourist_Accommodation` con información de apartamentos turísticos (id, nombre, descripción, tipo de habitación, barrio, host, baños, dormitorios, camas, precio, valoraciones, etc.)
 - **Datasets INE (Instituto Nacional de Estadística)**:
   - Viajeros y pernoctaciones por comunidades autónomas y provincias
-    - Viajeros y pernoctaciones por puntos turísticos
-      - Viajeros y pernoctaciones según país de residencia
-        - Coeficiente de variación de viajeros y pernoctaciones
-          - Variación anual de estancia media, establecimientos, ocupación y empleados
+  - Viajeros y pernoctaciones por puntos turísticos
+  - Viajeros y pernoctaciones según país de residencia
+  - Coeficiente de variación de viajeros y pernoctaciones
+  - Variación anual de estancia media, establecimientos, ocupación y empleados
 
-          ---
+---
 
-          ## 📈 Resultados principales
+## 📈 Resultados principales
 
-          - Dashboard en **Power BI** con páginas dedicadas a ocupación, satisfacción del cliente, perfil del viajero y variaciones temporales
-          - **KPIs tracked**: tasa de ocupación mensual, índice de satisfacción general, rankings por ciudad e ítem
-          - **Propuestas de negocio** documentadas con recomendaciones estratégicas para Gaia Travels
-          - Análisis de tendencias alineado con la **Estrategia de Turismo España 2030**
-          - Gráficos Plotly interactivos en HTML listos para integrar en presentaciones o web
+- Dashboard en **Power BI** con páginas dedicadas a ocupación, satisfacción del cliente, perfil del viajero y variaciones temporales
+- **KPIs tracked**: tasa de ocupación mensual, índice de satisfacción general, rankings por ciudad e ítem
+- **Propuestas de negocio** documentadas con recomendaciones estratégicas para Gaia Travels
+- Análisis de tendencias alineado con la **Estrategia de Turismo España 2030**
+- Gráficos Plotly interactivos en HTML listos para integrar en presentaciones o web
 
-          ---
+---
 
-          ## 👥 Equipo — Equip 10
+## 👥 Equipo — Equip 10
 
-          | Rol | Área |
-          |---|---|
-          | Analista de Marketing y Comunicación | Segmentación, posicionamiento, tendencias |
-          | Analista de Perfil del Cliente | Comportamiento, valoraciones, tipología |
-          | Analista de Operaciones | Gestión de inventario, capacidad, eficiencia |
-          | Analista de Experiencia del Cliente | Satisfacción, puntuaciones, reviews |
-          | Analista de Finanzas y Riesgo | Variaciones, KPIs económicos |
-          | Responsable de Calidad del Repositorio *(rol rotativo)* | Revisión, merge, estándares de código |
-          | **Mentora / Directora del Departamento** | Facilitación y orientación técnica |
+| Rol | Área |
+|---|---|
+| Analista de Marketing y Comunicación | Segmentación, posicionamiento, tendencias |
+| Analista de Perfil del Cliente | Comportamiento, valoraciones, tipología |
+| Analista de Operaciones | Gestión de inventario, capacidad, eficiencia |
+| Analista de Experiencia del Cliente | Satisfacción, puntuaciones, reviews |
+| Analista de Finanzas y Riesgo | Variaciones, KPIs económicos |
+| Responsable de Calidad del Repositorio *(rol rotativo)* | Revisión, merge, estándares de código |
+| **Mentora / Directora del Departamento** | Facilitación y orientación técnica |
 
-          ---
+---
 
-          ## ⚙️ Cómo reproducir el análisis
+## ⚙️ Cómo reproducir el análisis
 
-          1. Clona el repositorio:
-             ```bash
-                git clone https://gitlab.com/fueAtlas/analisis-alojamientos-turisticos.git
-                   ```
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Isanagui1818/analisis-alojamientos-turisticos.git
+   ```
+2. Instala las dependencias principales:
+   ```bash
+   pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
+   ```
+3. Navega a la carpeta del equipo:
+   ```bash
+   cd Equip_10/Scripts/
+   ```
+4. Ejecuta los notebooks en orden de sprint (Sprint_1 → Sprint_4).
 
-                   2. Instala las dependencias principales:
-                      ```bash
-                         pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
-                            ```
+> **Nota:** Los notebooks que se conectan a MySQL requieren acceso a la base de datos del proyecto. Para el análisis con CSVs locales, los archivos necesarios están incluidos en cada carpeta de sprint.
 
-                            3. Navega a la carpeta del equipo:
-                               ```bash
-                                  cd Equip_10/Scripts/
-                                     ```
+---
 
-                                     4. Ejecuta los notebooks en orden de sprint (Sprint_1 → Sprint_4).
+## 📄 Licencia
 
-                                     > **Nota:** Los notebooks que se conectan a MySQL requieren acceso a la base de datos del proyecto. Para el análisis con CSVs locales, los archivos necesarios están incluidos en cada carpeta de sprint.
+Este proyecto está bajo la licencia [MIT](LICENSE) © 2026 Isanagui Rojas.
 
-                                     ---
+---
 
-                                     ## 📄 Licencia
-
-                                     Este proyecto está bajo la licencia [MIT](LICENSE) © 2026 Isanagui Rojas.
-
-                                     ---
-
-                                     *Proyecto desarrollado en IT Academy · Barcelona Activa · Simulador Empresarial · 2025*
+*Proyecto desarrollado en IT Academy · Barcelona Activa · Simulador Empresarial · 2025*

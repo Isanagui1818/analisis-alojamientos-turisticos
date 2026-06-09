@@ -139,10 +139,4 @@ Final project of the IT Academy Business Simulator (Barcelona Activa). A four-sp
 
 ---
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia [MIT](LICENSE) © 2025 Isanagui Rojas.
-
----
-
 *Proyecto desarrollado en IT Academy · Barcelona Activa · Simulador Empresarial · 2025*

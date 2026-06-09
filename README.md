@@ -1,142 +1,154 @@
-# 🏨 Análisis de Alojamientos Turísticos — Gaia Travels
-> Proyecto final del Simulador Empresarial · IT Academy Barcelona Activa · Equip 10
+# 🏨 Tourism Accommodation Analysis — Gaia Travels
+> Final project of the Business Simulator · IT Academy Barcelona Activa · Team 10
 
 ---
 
-## 📋 Descripción del proyecto
+## 📋 Project overview
 
-Este proyecto simula el trabajo real de un **Departamento de Análisis de Datos** dentro de una empresa del sector turístico llamada **Gaia Travels**. A lo largo de cuatro sprints, el equipo realizó un análisis completo del mercado de alojamientos turísticos en España: desde la extracción y limpieza de datos hasta la generación de KPIs, visualizaciones interactivas y un dashboard en Power BI con propuestas de negocio accionables.
+This project simulates the real work of a **Data Analytics Department** within a fictional tourism company called **Gaia Travels**. Over four sprints, the team conducted a comprehensive analysis of the Spanish tourism accommodation market: from data extraction and cleaning through to KPI generation, interactive visualisations, and a Power BI dashboard with actionable business proposals.
 
-El proyecto nació en el marco del **Simulador Empresarial de IT Academy (Barcelona Activa)**, un entorno de aprendizaje que replica las dinámicas de trabajo profesional — reuniones de equipo, gestión ágil con tablero Kanban, roles especializados y presentaciones semanales de resultados.
-
----
-
-## 🎯 Objetivos
-
-- Aplicar un flujo completo de análisis de datos (ETL → EDA → KPIs → Visualización → Propuestas)
-- Analizar el comportamiento de los alojamientos turísticos en España: ocupación, pernoctaciones, perfil del viajero y satisfacción del cliente
-- Identificar patrones de estacionalidad, variaciones anuales y procedencia de viajeros
-- Construir un dashboard interactivo en Power BI para la toma de decisiones empresariales
-- Elaborar propuestas de negocio concretas alineadas con la **Estrategia de Turismo España 2030**
+The project was developed within the framework of the **IT Academy Business Simulator (Barcelona Activa)**, a learning environment that replicates professional working dynamics — team meetings, agile management with a Kanban board, specialised roles, and weekly results presentations.
 
 ---
 
-## ⚡ Handicaps tecnológicos semanales
+## 🎯 Objectives
 
-Una de las características más diferenciales del simulador fue la introducción de un **handicap tecnológico cada semana**, simulando imprevistos reales del entorno profesional. Al liberar los datos del nuevo sprint, el equipo recibía una restricción técnica adicional que obligaba a replantear el enfoque y buscar soluciones alternativas.
+- Apply a complete data analysis workflow (ETL → EDA → KPIs → Visualisation → Proposals)
+- Analyse the behaviour of tourism accommodations in Spain: occupancy, overnight stays, traveller profile, and customer satisfaction
+- Identify seasonality patterns, annual variations, and traveller origin
+- Build an interactive Power BI dashboard to support business decision-making
+- Develop concrete business proposals aligned with **Spain's Tourism Strategy 2030**
 
-| Semana | Restricción simulada | Solución adoptada |
+---
+
+## ⚡ Weekly technology handicaps
+
+One of the most distinctive features of the simulator was the introduction of a **technology handicap each week**, simulating real-world unexpected constraints. When new sprint data was released, the team received an additional technical restriction that required rethinking the approach and finding alternative solutions.
+
+| Week | Simulated constraint | Solution adopted |
 |---|---|---|
-| Sprint 1 | Sin restricción — sprint de arranque | — |
-| Sprint 2 | Servidor SQL caído — datos inaccesibles por base de datos | Entrega de datos en CSV · carga directa con pandas |
-| Sprint 3 | Licencias de Power BI caducadas | Visualizaciones alternativas con Plotly y matplotlib |
-| Sprint 4 | Plazo reducido (entrega el jueves) + requerimiento de benchmarking externo | Integración de datasets del INE · priorización de tareas · coordinación intensiva del equipo |
+| Sprint 1 | No restriction — kick-off sprint | — |
+| Sprint 2 | SQL server down — data inaccessible via database | Data delivered as CSV · direct load with pandas |
+| Sprint 3 | Expired Power BI licences | Alternative visualisations with Plotly and matplotlib |
+| Sprint 4 | Reduced deadline (Thursday delivery) + external benchmarking requirement | INE dataset integration · task prioritisation · intensive team coordination |
 
-> El Sprint 4 combinó dos presiones simultáneas: la reducción del plazo de entrega y la petición de la empresa de contrastar los datos internos con datos reales del mercado turístico español. Esto requirió incorporar y cruzar fuentes externas del **Instituto Nacional de Estadística (INE)** para contextualizar los KPIs propios de Gaia Travels dentro del comportamiento real del sector, y así fundamentar las propuestas estratégicas de negocio sobre datos objetivos.
+> Sprint 4 combined two simultaneous pressures: a shortened delivery deadline and a company request to benchmark internal data against real Spanish tourism market data. This required incorporating and cross-referencing external sources from the **National Statistics Institute (INE)** to contextualise Gaia Travels' KPIs within the real sector behaviour, grounding the strategic business proposals on objective data.
 
-> Este mecanismo entrenó la capacidad del equipo para **adaptarse a entornos con recursos limitados**, tomar decisiones técnicas bajo presión y encontrar soluciones alternativas manteniendo la calidad del análisis — una competencia directamente transferible al entorno profesional real.
-
----
-
-## 🔄 Metodología: 4 Sprints
-
-Cada sprint giraba en torno a una **pregunta de negocio** planteada por Gaia Travels. El equipo debía responderla con los datos disponibles, respetando el handicap tecnológico de la semana y entregando resultados accionables. El Sprint 1 fue el más exigente al combinar la construcción completa del pipeline ETL con el primer análisis exploratorio. A partir del Sprint 2, la ETL se mantenía o actualizaba únicamente si los datos del nuevo sprint introducían cambios estructurales, lo que permitió al equipo centrarse progresivamente en el análisis y las conclusiones de negocio.
-
-### Sprint 1 — ETL + EDA General *(el más exigente)*
-**Pregunta de negocio:** ¿Cuál es el estado actual del mercado de alojamientos turísticos en España y qué variables explican mejor el comportamiento de la oferta?
-
-Construcción del pipeline ETL completo: conexión a la base de datos MySQL (`Tourist_Accommodation`) con SQLAlchemy y pandas, limpieza y transformación de variables (`bathrooms`, `bedrooms`, `beds`), imputación de nulos por medianas agrupadas. Sobre el dataset resultante se realizó el EDA general con primeras exploraciones estadísticas y visuales con matplotlib y seaborn. Este sprint estableció la base de datos limpia de la que partirían todos los sprints siguientes.
-
-### Sprint 2 — Análisis por Departamentos
-**Pregunta de negocio:** ¿Qué insights específicos puede extraer cada área de negocio (marketing, operaciones, experiencia del cliente) para mejorar su toma de decisiones?
-
-Cada analista respondió la pregunta desde su área de especialización, profundizando en las variables relevantes para su dominio. La ETL se actualizó puntualmente para incorporar los nuevos datos entregados en CSV tras la caída del servidor SQL (handicap de la semana).
-
-### Sprint 3 — KPIs e Indicadores de Negocio
-**Pregunta de negocio:** ¿Cuáles son los indicadores clave de rendimiento de Gaia Travels y cómo evolucionan?
-
-Definición y cálculo de los KPIs principales: tasa de ocupación mensual, índice de satisfacción general, ciudad con mayor ocupación e ítem con mayor valoración. Ante la caducidad de las licencias de Power BI (handicap), se generaron dashboards interactivos alternativos en HTML con Plotly (`fig1_ocupacion`, `fig2_satisfaccion`, `fig3_ciudad`, `fig4_item`).
-
-### Sprint 4 — Benchmarking Externo y Propuestas Estratégicas
-**Pregunta de negocio:** ¿Cómo se posiciona Gaia Travels frente al mercado turístico real español y hacia dónde debería dirigir su estrategia?
-
-La empresa solicitó contrastar los datos internos con el comportamiento real del sector. Se integraron datasets del **INE** (viajeros, pernoctaciones, estancia media, variaciones anuales por comunidades autónomas y país de residencia) para contextualizar los KPIs propios dentro del mercado real. Las conclusiones fundamentaron las propuestas estratégicas de negocio alineadas con la **Estrategia de Turismo España 2030**. Todo ello entregado bajo plazo reducido (handicap de la semana).
+> This mechanism trained the team's ability to **adapt to resource-constrained environments**, make technical decisions under pressure, and find alternative solutions without compromising analysis quality — a skill directly transferable to a real professional environment.
 
 ---
 
-## 📊 Stack tecnológico
+## 🔄 Methodology: 4 Sprints
 
-| Herramienta | Uso |
+Each sprint was structured around a **business question** posed by Gaia Travels. The team had to answer it using the available data, respecting the week's technology handicap and delivering actionable results. Sprint 1 was the most demanding, combining the full ETL pipeline build with the first exploratory analysis. From Sprint 2 onwards, the ETL was maintained or updated only when the new sprint's data introduced structural changes, allowing the team to focus progressively on analysis and business conclusions.
+
+### Sprint 1 — ETL + General EDA *(most demanding)*
+**Business question:** What is the current state of the Spanish tourism accommodation market and which variables best explain supply behaviour?
+
+Full ETL pipeline construction: connection to the MySQL database (`Tourist_Accommodation`) using SQLAlchemy and pandas, cleaning and transformation of variables (`bathrooms`, `bedrooms`, `beds`), null imputation by grouped medians. The resulting dataset was used for the general EDA with initial statistical and visual exploration using matplotlib and seaborn. This sprint established the clean dataset that all subsequent sprints would build upon.
+
+### Sprint 2 — Department-level Analysis
+**Business question:** What specific insights can each business area (marketing, operations, customer experience) extract to improve decision-making?
+
+Each analyst addressed the question from their area of specialisation, diving deeper into the variables relevant to their domain. The ETL was updated to incorporate new data delivered as CSV following the SQL server outage (week's handicap).
+
+### Sprint 3 — KPIs and Business Indicators
+**Business question:** What are Gaia Travels' key performance indicators and how do they evolve?
+
+Definition and calculation of the main KPIs: monthly occupancy rate, overall satisfaction index, highest-occupancy city, and highest-rated item. Given the expired Power BI licences (handicap), alternative interactive dashboards were generated in HTML using Plotly (`fig1_ocupacion`, `fig2_satisfaccion`, `fig3_ciudad`, `fig4_item`).
+
+### Sprint 4 — External Benchmarking and Strategic Proposals
+**Business question:** How does Gaia Travels compare to the real Spanish tourism market and where should it direct its strategy?
+
+The company requested benchmarking internal data against real sector behaviour. **INE** datasets were integrated (travellers, overnight stays, average length of stay, annual variations by autonomous community and country of residence) to contextualise internal KPIs within the real market. The findings underpinned strategic business proposals aligned with **Spain's Tourism Strategy 2030**, all delivered under a reduced deadline (week's handicap).
+
+---
+
+## 📊 Tech stack
+
+| Tool | Usage |
 |---|---|
-| **Python** | Análisis, limpieza y visualización de datos |
-| **pandas** | Manipulación y transformación de DataFrames |
-| **matplotlib / seaborn** | Visualizaciones estáticas y EDA |
-| **Plotly Express** | Gráficos interactivos exportados en HTML |
-| **SQLAlchemy** | Conexión y consulta a base de datos MySQL |
-| **MySQL** | Base de datos principal (`Tourist_Accommodation`) |
-| **Power BI** | Dashboard interactivo final |
-| **Jupyter Notebook** | Entorno de desarrollo y documentación |
-| **Git / GitLab** | Control de versiones y colaboración en equipo |
+| **Python** | Data analysis, cleaning and visualisation |
+| **pandas** | DataFrame manipulation and transformation |
+| **matplotlib / seaborn** | Static visualisations and EDA |
+| **Plotly Express** | Interactive charts exported as HTML |
+| **SQLAlchemy** | MySQL database connection and querying |
+| **MySQL** | Main database (`Tourist_Accommodation`) |
+| **Power BI** | Final interactive dashboard |
+| **Jupyter Notebook** | Development and documentation environment |
+| **Git / GitLab** | Version control and team collaboration |
 
 ---
 
-## 📁 Datos utilizados
+## 📁 Data sources
 
-Los datos son **ficticios**, generados para el simulador con estructura realista basada en el mercado de alojamientos turísticos español.
+The data is **fictional**, generated for the simulator with a realistic structure based on the Spanish tourism accommodation market.
 
-**Cobertura geográfica:** Barcelona · Girona · Madrid · Mallorca · Menorca · Sevilla · Valencia
+**Geographic coverage:** Barcelona · Girona · Madrid · Mallorca · Menorca · Sevilla · Valencia
 
-- **Base de datos MySQL**: tabla `Tourist_Accommodation` con información de apartamentos turísticos (id, nombre, descripción, tipo de habitación, barrio, host, baños, dormitorios, camas, precio, valoraciones, etc.)
-- **Datasets INE (Instituto Nacional de Estadística)**:
-  - Viajeros y pernoctaciones por comunidades autónomas y provincias
-  - Viajeros y pernoctaciones por puntos turísticos
-  - Viajeros y pernoctaciones según país de residencia
-  - Coeficiente de variación de viajeros y pernoctaciones
-  - Variación anual de estancia media, establecimientos, ocupación y empleados
-
----
-
-## 📈 Resultados principales
-
-- Dashboard en **Power BI** con páginas dedicadas a ocupación, satisfacción del cliente, perfil del viajero y variaciones temporales
-- **KPIs tracked**: tasa de ocupación mensual, índice de satisfacción general, rankings por ciudad e ítem
-- **Propuestas de negocio** documentadas con recomendaciones estratégicas para Gaia Travels
-- Análisis de tendencias alineado con la **Estrategia de Turismo España 2030**
-- Benchmarking externo con fuentes INE para validar los datos internos frente al mercado real
-- Gráficos Plotly interactivos en HTML listos para integrar en presentaciones o web
+- **MySQL database**: `Tourist_Accommodation` table containing tourism apartment data (id, name, description, room type, neighbourhood, host, bathrooms, bedrooms, beds, price, ratings, etc.)
+- **INE (National Statistics Institute) datasets**:
+  - Travellers and overnight stays by autonomous community and province
+  - Travellers and overnight stays by tourist destination
+  - Travellers and overnight stays by country of residence
+  - Coefficient of variation for travellers and overnight stays
+  - Annual variation in average stay, establishments, occupancy, and employees
 
 ---
 
-## 👥 Equipo — Equip 10
+## 📈 Key results
 
-| Rol | Área |
+- **Power BI dashboard** with dedicated pages for occupancy, customer satisfaction, traveller profile, and temporal variations
+- **KPIs tracked**: monthly occupancy rate, overall satisfaction index, city and item rankings
+- **Business proposals** documented with strategic recommendations for Gaia Travels
+- Trend analysis aligned with **Spain's Tourism Strategy 2030**
+- External benchmarking with INE sources to validate internal data against real market figures
+- Interactive Plotly charts in HTML ready to embed in presentations or web pages
+
+---
+
+## 👥 Team — Team 10
+
+| Role | Area |
 |---|---|
-| **Analista de Experiencia del Cliente + Data Steward** ⬅️ *mi rol* | Satisfacción, puntuaciones y reviews · ETL centralizado y preparación de datasets para todos los departamentos |
-| Analista de Marketing y Comunicación | Segmentación, posicionamiento, tendencias |
-| Analista de Perfil del Cliente | Comportamiento, valoraciones, tipología |
-| Analista de Operaciones | Gestión de inventario, capacidad, eficiencia |
-| Analista de Finanzas y Riesgo | Variaciones, KPIs económicos |
-| Responsable de Calidad del Repositorio *(rol rotativo)* | Revisión, merge, estándares de código |
-| **Mentora / Directora del Departamento** | Facilitación y orientación técnica |
+| **Customer Experience Analyst + Data Steward** ⬅️ *my role* | Satisfaction, ratings and reviews · Centralised ETL and dataset preparation for all departments |
+| Marketing and Communications Analyst | Segmentation, positioning, trends |
+| Customer Profile Analyst | Behaviour, ratings, typology |
+| Operations Analyst | Inventory management, capacity, efficiency |
+| Finance and Risk Analyst | Variations, economic KPIs |
+| Repository Quality Manager *(rotating role)* | Review, merge, code standards |
+| **Mentor / Department Director** | Technical facilitation and guidance |
 
-### 🔧 Mi contribución específica
+### 🔧 My specific contribution
 
-Además de las responsabilidades de análisis de experiencia del cliente, asumí el rol transversal de **Data Steward** del equipo. El dataset original contenía un volumen elevado de columnas y variables, y cada sprint los distintos departamentos requerían subconjuntos distintos. Me encargué de coordinarlo al inicio de cada sprint: identificando qué variables necesitaba cada área, ejecutando la limpieza y selección, y entregando datasets optimizados listos para el análisis. Esto evitó que cada analista cargara y procesara el dataset completo de forma redundante, reduciendo tiempos y garantizando coherencia en los datos de partida para todo el equipo.
-
----
-<sub><img src="https://flagcdn.com/16x12/us.png" alt="US"> English summary</sub>
-
-**Tourism Accommodation Analysis — Gaia Travels**
-Final project of the IT Academy Business Simulator (Barcelona Activa). A four-sprint data analysis project simulating a real Data Analytics Department within a fictional tourism company.
-
-**What we built:** Each sprint was structured around a business question posed by Gaia Travels. Sprint 1 was the most demanding — it combined building the full ETL pipeline from scratch (MySQL + CSV) with the initial exploratory analysis. From Sprint 2 onwards, the ETL was only updated when incoming data required it, allowing the team to focus increasingly on analysis and business conclusions: department-level insights → KPI tracking → external benchmarking against real market data → Power BI dashboard and strategic proposals aligned with Spain's Tourism Strategy 2030.
-
-**What made it challenging:** Each sprint introduced a simulated real-world constraint (SQL server down, expired BI licences, shortened deadline + external benchmarking requirement). Sprint 4 required integrating INE (Spanish National Statistics Institute) datasets to benchmark internal KPIs against real market data, all under a reduced deadline.
-
-**My role:** Customer Experience Analyst + team Data Steward — responsible for centralised ETL and weekly dataset preparation for all departments, ensuring each team received clean, scoped data ready for their specific analysis.
-
-**Stack:** Python · pandas · matplotlib · seaborn · Plotly · SQLAlchemy · MySQL · Power BI · Jupyter · Git
+In addition to my customer experience analysis responsibilities, I took on the transversal role of **Data Steward** for the team. The original dataset contained a large number of columns and variables, and each sprint the different departments required different subsets. I coordinated this at the start of each sprint: identifying which variables each area needed, executing the cleaning and selection, and delivering optimised, analysis-ready datasets. This prevented every analyst from loading and processing the full dataset redundantly, reducing processing time and ensuring consistency in the starting data across the entire team.
 
 ---
 
-*Proyecto desarrollado en IT Academy · Barcelona Activa · Simulador Empresarial · 2025*
+## ⚙️ How to reproduce the analysis
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Isanagui1818/analisis-alojamientos-turisticos.git
+   ```
+2. Install the main dependencies:
+   ```bash
+   pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
+   ```
+3. Navigate to the team folder:
+   ```bash
+   cd Equip_10/Scripts/
+   ```
+4. Run the notebooks in sprint order (Sprint_1 → Sprint_4).
+
+> **Note:** Notebooks that connect to MySQL require access to the project database. For analysis using local CSVs, the necessary files are included in each sprint folder.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) © 2025 Isanagui Rojas.
+
+---
+
+*Project developed at IT Academy · Barcelona Activa · Business Simulator · 2025*

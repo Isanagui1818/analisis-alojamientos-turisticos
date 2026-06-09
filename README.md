@@ -23,6 +23,29 @@ El proyecto nació en el marco del **Simulador Empresarial de IT Academy (Barcel
 ---
 
 ## 🗂️ Estructura del repositorio
+
+El trabajo está organizado dentro de la carpeta `Equip_10`, dividida en tres áreas principales que reflejan las fases del análisis: los datos de origen, los scripts de procesamiento agrupados por sprint y los resultados finales entregables.
+
+```
+analisis-alojamientos-turisticos/
+├── Equip_10/
+│   ├── Data/                  # Datasets originales (CSV, fuentes INE)
+│   ├── Scripts/
+│   │   ├── Sprint_1/          # ETL + EDA general, EDA por áreas
+│   │   ├── Sprint_2/          # Análisis especializado por departamento
+│   │   ├── Sprint_3/          # KPIs, visualizaciones interactivas (Plotly)
+│   │   ├── Sprint_4/          # Variaciones anuales, pernoctaciones, Power BI
+│   │   └── README.md
+│   └── Results/
+│       ├── Sprint_1/          # Primeros resultados y dashboard inicial
+│       ├── Sprint_2/          # Presentaciones y análisis por rol
+│       ├── Sprint_3/          # Gráficos interactivos HTML
+│       └── Sprint_4/          # Dashboard BI final + propuestas de negocio
+├── Guia Git i GitHub.pdf
+├── LICENSE
+└── README.md
+```
+
 ---
 
 ## 🔄 Metodología: 4 Sprints
@@ -62,64 +85,64 @@ Análisis de variaciones anuales de viajeros, pernoctaciones y estancia media. S
 - **Base de datos MySQL**: tabla `Tourist_Accommodation` con información de apartamentos turísticos (id, nombre, descripción, tipo de habitación, barrio, host, baños, dormitorios, camas, precio, valoraciones, etc.)
 - **Datasets INE (Instituto Nacional de Estadística)**:
   - Viajeros y pernoctaciones por comunidades autónomas y provincias
-  - Viajeros y pernoctaciones por puntos turísticos
-  - Viajeros y pernoctaciones según país de residencia
-  - Coeficiente de variación de viajeros y pernoctaciones
-  - Variación anual de estancia media, establecimientos, ocupación y empleados
+    - Viajeros y pernoctaciones por puntos turísticos
+      - Viajeros y pernoctaciones según país de residencia
+        - Coeficiente de variación de viajeros y pernoctaciones
+          - Variación anual de estancia media, establecimientos, ocupación y empleados
 
----
+          ---
 
-## 📈 Resultados principales
+          ## 📈 Resultados principales
 
-- Dashboard en **Power BI** con páginas dedicadas a ocupación, satisfacción del cliente, perfil del viajero y variaciones temporales
-- **KPIs tracked**: tasa de ocupación mensual, índice de satisfacción general, rankings por ciudad e ítem
-- **Propuestas de negocio** documentadas con recomendaciones estratégicas para Gaia Travels
-- Análisis de tendencias alineado con la **Estrategia de Turismo España 2030**
-- Gráficos Plotly interactivos en HTML listos para integrar en presentaciones o web
+          - Dashboard en **Power BI** con páginas dedicadas a ocupación, satisfacción del cliente, perfil del viajero y variaciones temporales
+          - **KPIs tracked**: tasa de ocupación mensual, índice de satisfacción general, rankings por ciudad e ítem
+          - **Propuestas de negocio** documentadas con recomendaciones estratégicas para Gaia Travels
+          - Análisis de tendencias alineado con la **Estrategia de Turismo España 2030**
+          - Gráficos Plotly interactivos en HTML listos para integrar en presentaciones o web
 
----
+          ---
 
-## 👥 Equipo — Equip 10
+          ## 👥 Equipo — Equip 10
 
-| Rol | Área |
-|---|---|
-| Analista de Marketing y Comunicación | Segmentación, posicionamiento, tendencias |
-| Analista de Perfil del Cliente | Comportamiento, valoraciones, tipología |
-| Analista de Operaciones | Gestión de inventario, capacidad, eficiencia |
-| Analista de Experiencia del Cliente | Satisfacción, puntuaciones, reviews |
-| Analista de Finanzas y Riesgo | Variaciones, KPIs económicos |
-| Responsable de Calidad del Repositorio *(rol rotativo)* | Revisión, merge, estándares de código |
-| **Mentora / Directora del Departamento** | Facilitación y orientación técnica |
+          | Rol | Área |
+          |---|---|
+          | Analista de Marketing y Comunicación | Segmentación, posicionamiento, tendencias |
+          | Analista de Perfil del Cliente | Comportamiento, valoraciones, tipología |
+          | Analista de Operaciones | Gestión de inventario, capacidad, eficiencia |
+          | Analista de Experiencia del Cliente | Satisfacción, puntuaciones, reviews |
+          | Analista de Finanzas y Riesgo | Variaciones, KPIs económicos |
+          | Responsable de Calidad del Repositorio *(rol rotativo)* | Revisión, merge, estándares de código |
+          | **Mentora / Directora del Departamento** | Facilitación y orientación técnica |
 
----
+          ---
 
-## ⚙️ Cómo reproducir el análisis
+          ## ⚙️ Cómo reproducir el análisis
 
-1. Clona el repositorio:
-```bash
-   git clone https://gitlab.com/fueAtlas/analisis-alojamientos-turisticos.git
-```
+          1. Clona el repositorio:
+             ```bash
+                git clone https://gitlab.com/fueAtlas/analisis-alojamientos-turisticos.git
+                   ```
 
-2. Instala las dependencias principales:
-```bash
-   pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
-```
+                   2. Instala las dependencias principales:
+                      ```bash
+                         pip install pandas matplotlib seaborn plotly sqlalchemy pymysql jupyter
+                            ```
 
-3. Navega a la carpeta del equipo:
-```bash
-   cd Equip_10/Scripts/
-```
+                            3. Navega a la carpeta del equipo:
+                               ```bash
+                                  cd Equip_10/Scripts/
+                                     ```
 
-4. Ejecuta los notebooks en orden de sprint (Sprint_1 → Sprint_4).
+                                     4. Ejecuta los notebooks en orden de sprint (Sprint_1 → Sprint_4).
 
-> **Nota:** Los notebooks que se conectan a MySQL requieren acceso a la base de datos del proyecto. Para el análisis con CSVs locales, los archivos necesarios están incluidos en cada carpeta de sprint.
+                                     > **Nota:** Los notebooks que se conectan a MySQL requieren acceso a la base de datos del proyecto. Para el análisis con CSVs locales, los archivos necesarios están incluidos en cada carpeta de sprint.
 
----
+                                     ---
 
-## 📄 Licencia
+                                     ## 📄 Licencia
 
-Este proyecto está bajo la licencia [MIT](LICENSE) © 2026 Isanagui Rojas.
+                                     Este proyecto está bajo la licencia [MIT](LICENSE) © 2026 Isanagui Rojas.
 
----
+                                     ---
 
-*Proyecto desarrollado en IT Academy · Barcelona Activa · Simulador Empresarial · 2025*
+                                     *Proyecto desarrollado en IT Academy · Barcelona Activa · Simulador Empresarial · 2025*

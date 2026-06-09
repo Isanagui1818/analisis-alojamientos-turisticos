@@ -145,10 +145,4 @@ In addition to my customer experience analysis responsibilities, I took on the t
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE) © 2025 Isanagui Rojas.
-
----
-
 *Project developed at IT Academy · Barcelona Activa · Business Simulator · 2025*
